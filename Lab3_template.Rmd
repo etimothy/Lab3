@@ -28,14 +28,17 @@ Initial exploration revealed that some data processing was needed before we coul
 #insert relevant R code for Q1 here
 happy <- readRDS("HAPPY.rds")
 names(happy) = tolower(names(happy))
+happy[happy == "IAP"] <- NA
+happy[happy == "DK"] <- NA
 clean_happy <- na.omit(happy)
 ```
 
-In total there were `5737` number of missing values for the following `62376` variables. 
+In total there were `25170` number of missing values for the following `62376` variables. 
 
 Variables were also cast into the correct type in order to ease data visualization. This was done by:
 ```{r}
 #insert relevant R code for Q2 here
+
 ```
 
 Factors were also organized into meaningful order as follows: 

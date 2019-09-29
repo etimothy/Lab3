@@ -408,8 +408,10 @@ summary {
 <pre class="r"><code>#insert relevant R code for Q1 here
 happy &lt;- readRDS(&quot;HAPPY.rds&quot;)
 names(happy) = tolower(names(happy))
+happy[happy == &quot;IAP&quot;] &lt;- NA
+happy[happy == &quot;DK&quot;] &lt;- NA
 clean_happy &lt;- na.omit(happy)</code></pre>
-<p>In total there were <code>5737</code> number of missing values for the following <code>62376</code> variables.</p>
+<p>In total there were <code>25170</code> number of missing values for the following <code>62376</code> variables.</p>
 <p>Variables were also cast into the correct type in order to ease data visualization. This was done by:</p>
 <pre class="r"><code>#insert relevant R code for Q2 here</code></pre>
 <p>Factors were also organized into meaningful order as follows:</p>
