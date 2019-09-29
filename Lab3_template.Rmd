@@ -26,9 +26,12 @@ Now it's important to understand what each column stands for. You can find a cod
 Initial exploration revealed that some data processing was needed before we could proceed with further visualization. All missing values were encoded with 'NA' as follows:
 ```{r}
 #insert relevant R code for Q1 here
+happy <- readRDS("HAPPY.rds")
+names(happy) = tolower(names(happy))
+clean_happy <- na.omit(happy)
 ```
 
-In total there were `....` number of missing values for the following `....` variables. 
+In total there were `5737` number of missing values for the following `62376` variables. 
 
 Variables were also cast into the correct type in order to ease data visualization. This was done by:
 ```{r}
