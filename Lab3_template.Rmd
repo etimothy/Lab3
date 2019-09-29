@@ -38,7 +38,8 @@ In total there were `25170` number of missing values for the following `62376` v
 Variables were also cast into the correct type in order to ease data visualization. This was done by:
 ```{r}
 #insert relevant R code for Q2 here
-
+clean_happy[clean_happy == "89 OR OLDER"] <- as.numeric(89)
+head(clean_happy)
 ```
 
 Factors were also organized into meaningful order as follows: 

@@ -413,7 +413,23 @@ happy[happy == &quot;DK&quot;] &lt;- NA
 clean_happy &lt;- na.omit(happy)</code></pre>
 <p>In total there were <code>25170</code> number of missing values for the following <code>62376</code> variables.</p>
 <p>Variables were also cast into the correct type in order to ease data visualization. This was done by:</p>
-<pre class="r"><code>#insert relevant R code for Q2 here</code></pre>
+<pre class="r"><code>#insert relevant R code for Q2 here
+clean_happy[clean_happy == &quot;89 OR OLDER&quot;] &lt;- as.numeric(89)
+head(clean_happy)</code></pre>
+<pre><code>##             happy year age    sex       marital         degree
+## 3118   VERY HAPPY 1974  21   MALE       MARRIED    HIGH SCHOOL
+## 3119   VERY HAPPY 1974  41   MALE       MARRIED       BACHELOR
+## 3120   VERY HAPPY 1974  83 FEMALE       WIDOWED LT HIGH SCHOOL
+## 3121 PRETTY HAPPY 1974  69 FEMALE       WIDOWED LT HIGH SCHOOL
+## 3122 PRETTY HAPPY 1974  58 FEMALE NEVER MARRIED    HIGH SCHOOL
+## 3123 PRETTY HAPPY 1974  30   MALE       MARRIED       BACHELOR
+##            finrela    health wtssall          partyid             polviews
+## 3118 BELOW AVERAGE EXCELLENT   0.932     IND,NEAR DEM             MODERATE
+## 3119 ABOVE AVERAGE      GOOD   0.932  STRONG DEMOCRAT SLGHTLY CONSERVATIVE
+## 3120       AVERAGE      GOOD   0.466  STRONG DEMOCRAT         CONSERVATIVE
+## 3121       AVERAGE      GOOD   0.466  STRONG DEMOCRAT         CONSERVATIVE
+## 3122       AVERAGE      FAIR   0.466 NOT STR DEMOCRAT         CONSERVATIVE
+## 3123       AVERAGE      GOOD   0.932     IND,NEAR REP SLGHTLY CONSERVATIVE</code></pre>
 <p>Factors were also organized into meaningful order as follows:</p>
 <pre class="r"><code>#insert relevant R code for Q3 here</code></pre>
 </div>
