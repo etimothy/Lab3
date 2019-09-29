@@ -431,7 +431,24 @@ head(clean_happy)</code></pre>
 ## 3122       AVERAGE      FAIR   0.466 NOT STR DEMOCRAT         CONSERVATIVE
 ## 3123       AVERAGE      GOOD   0.932     IND,NEAR REP SLGHTLY CONSERVATIVE</code></pre>
 <p>Factors were also organized into meaningful order as follows:</p>
-<pre class="r"><code>#insert relevant R code for Q3 here</code></pre>
+<pre class="r"><code>#insert relevant R code for Q3 here
+sortedByMarital &lt;- clean_happy[order(clean_happy$marital),]
+sortedByAge &lt;- sortedByMarital[order(sortedByMarital$age),]
+head(sortedByAge)</code></pre>
+<pre><code>##             happy year age    sex marital         degree       finrela
+## 3499 PRETTY HAPPY 1974  18 FEMALE MARRIED LT HIGH SCHOOL       AVERAGE
+## 4170 PRETTY HAPPY 1974  18 FEMALE MARRIED LT HIGH SCHOOL       AVERAGE
+## 5453   VERY HAPPY 1975  18 FEMALE MARRIED LT HIGH SCHOOL BELOW AVERAGE
+## 6291   VERY HAPPY 1976  18 FEMALE MARRIED    HIGH SCHOOL BELOW AVERAGE
+## 6445 PRETTY HAPPY 1976  18 FEMALE MARRIED LT HIGH SCHOOL       AVERAGE
+## 6969 PRETTY HAPPY 1976  18 FEMALE MARRIED LT HIGH SCHOOL       AVERAGE
+##         health wtssall          partyid             polviews
+## 3499 EXCELLENT  0.4660      INDEPENDENT              LIBERAL
+## 4170      GOOD  0.9320 NOT STR DEMOCRAT             MODERATE
+## 5453      GOOD  0.4660 NOT STR DEMOCRAT    EXTREMELY LIBERAL
+## 6291      GOOD  0.9709     IND,NEAR REP    EXTREMELY LIBERAL
+## 6445 EXCELLENT  0.9709     IND,NEAR DEM             MODERATE
+## 6969      GOOD  0.9709     IND,NEAR REP SLGHTLY CONSERVATIVE</code></pre>
 </div>
 <div id="data-exploration" class="section level2">
 <h2>Data Exploration</h2>

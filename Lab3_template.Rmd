@@ -45,6 +45,9 @@ head(clean_happy)
 Factors were also organized into meaningful order as follows: 
 ```{r}
 #insert relevant R code for Q3 here
+sortedByMarital <- clean_happy[order(clean_happy$marital),]
+sortedByAge <- sortedByMarital[order(sortedByMarital$age),]
+head(sortedByAge)
 ```
 
 
