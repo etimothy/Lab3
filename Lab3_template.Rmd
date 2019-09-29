@@ -41,6 +41,7 @@ Variables were also cast into the correct type in order to ease data visualizati
 clean_happy[clean_happy == "89 OR OLDER"] <- as.numeric(89)
 head(clean_happy)
 ```
+Setting the string "89 OR OLDER" as numeric value 89 and assuming it will be 89 so that all the values in column age will be numeric.
 
 Factors were also organized into meaningful order as follows: 
 ```{r}
@@ -49,10 +50,12 @@ sortedByMarital <- clean_happy[order(clean_happy$marital),]
 sortedByAge <- sortedByMarital[order(sortedByMarital$age),]
 head(sortedByAge)
 ```
+First we sorted the dataset by marital status and then sorted that dataset by age.
 
 
 ## Data Exploration 
 
+- Yealim
 Two variables of interest are `...` and `...`. Their distributions are as follow: 
 ```{r}
 #insert relevant R code here
@@ -60,6 +63,15 @@ Two variables of interest are `...` and `...`. Their distributions are as follow
 ```
 
 The distribution for `...` is `....`, suggesting that `....` 
+
+-Elcy
+Two variables of interest are `...` and `...`. Their distributions are as follow: 
+```{r}
+#insert relevant R code here
+#include graphics. DESCRIBE your plot in context. Make sure it includes axis labels and appropriate title. 
+```
+
+The distribution for `...` is `....`, suggesting that `....`
 
 
 
