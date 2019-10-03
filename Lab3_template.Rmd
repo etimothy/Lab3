@@ -1,7 +1,7 @@
 ---
-title: 'Template - Lab 3: Exploring Happiness'
+title: 'Lab 3: Exploring Happiness'
 subtitle: "Due: Thursday 10/03/2019 by 10 pm"
-author: "Lynna Chu"
+author: "Yealim Sung and Elcy Timothy"
 
 date: "09/26/2019"
 output: html_document
@@ -55,23 +55,26 @@ First we sorted the dataset by marital status and then sorted that dataset by ag
 
 ## Data Exploration 
 
-- Yealim
-Two variables of interest are `...` and `...`. Their distributions are as follow: 
+Two variables of interest are `sex` and `partyid`. Their distributions are as follow: 
 ```{r}
-#insert relevant R code here
-#include graphics. DESCRIBE your plot in context. Make sure it includes axis labels and appropriate title. 
+
+library(ggplot2)
+ggplot(sortedByAge, aes(sex, fill=partyid)) + geom_bar() + labs(x = "Sex", y = "Political Party ID", title = "Distribution of Political Party between the Genders")
+
+ggplot(sortedByAge, aes(sex, partyid)) + geom_jitter() + labs(x = "Sex", y = "Political Party ID", title = "Jitter plot on distribution of Political Party")
+ 
+```
+We chose variables `sex` and `partyid` because one of us is social science major and we wanted to see how one's political view affects the happiness and which sex are more interested in what political party. It seems like female are more interested in politics from this dataset. The most popular party id was 'NOT STR DEMOCRAT'. We will explore more on how it affects happiness on the next section.
+
+```{r}
+ggplot(sortedByAge, aes(happy, fill=partyid)) + geom_bar() + labs(x = "Happiness", y = "Political Party ID", title = "Bar chart of happiness over political party id")
+
+ggplot(sortedByAge, aes(happy, partyid)) +geom_point(aes(color=sex)) + geom_smooth() + labs(x = "Happiness", y = "Political Party ID", title = "Happiness over political party id")
 ```
 
 The distribution for `...` is `....`, suggesting that `....` 
 
--Elcy
-Two variables of interest are `...` and `...`. Their distributions are as follow: 
-```{r}
-#insert relevant R code here
-#include graphics. DESCRIBE your plot in context. Make sure it includes axis labels and appropriate title. 
-```
 
-The distribution for `...` is `....`, suggesting that `....`
 
 
 
