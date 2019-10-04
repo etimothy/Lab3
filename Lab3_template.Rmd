@@ -72,7 +72,7 @@ ggplot(sortedByAge, aes(happy, fill=partyid)) + geom_bar() + labs(x = "Happiness
 ggplot(sortedByAge, aes(happy, partyid)) +geom_point(aes(color=sex)) + geom_smooth() + labs(x = "Happiness", y = "Political Party ID", title = "Happiness over political party id")
 ```
 
-The distribution for `...` is `....`, suggesting that `....` 
+Comparing the variable party ID to happiness. We found that those who identity as NOT STR DEMOCRAT seem to have the largest distribution of happiness at pretty happy. The second party ID with the biggest distribution of happiness is STRONG DEMOCRAT at pretty happy.In this data set the repspondents are at the level of PRETTY HAPPY more than the others. And the party ID that is happier overall is NOT STRE DEMOCRAT and  STRONG DEMOCRAT in both categories of PRETTY HAPPY and VERY HAPPY. 
 
 
 
