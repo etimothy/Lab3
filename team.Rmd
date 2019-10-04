@@ -3,10 +3,14 @@ title: 'Lab 3: Exploring Happiness'
 subtitle: "Due: Thursday 10/03/2019 by 10 pm"
 author: "Yealim Sung and Elcy Timothy"
 
+
 date: "09/26/2019"
 output: html_document
 ---
 
+> Usernames: sunghailame, etimothy 
+
+> Repo name: ds202_lab3
 
 ## Background
 
